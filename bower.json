@@ -1,0 +1,25 @@
+{
+  "name": "diffCalculator",
+  "version": "0.0.0",
+  "description": "Diff between two docs",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Sundeep Narang <sundeepnrng@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "diff.sundeepnarang.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "diff": "~0.3.1",
+    "jquery": "~2.1.3"
+  }
+}
