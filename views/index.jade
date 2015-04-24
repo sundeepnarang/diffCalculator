@@ -1,5 +1,35 @@
 extends layout
-
+block head
+    script(src="/javascripts/diffCalc.js")
 block content
-  h1= title
-  p Welcome to #{title}
+    .well
+        .text-center
+          h1= title
+          p Welcome to #{title}
+        .row.viewone
+            .col-md-6
+                textarea#old(rows="20")
+            .col-md-6
+                textarea#new(rows="20")
+        .row.viewtwo
+            table.table.table-striped
+                thead
+                    tr.text-center
+                        th #
+                        th Old
+                        th New
+                tbody.comparision
+        hr
+        .row
+            .text-center.viewone
+                button.btn.btn-danger(type="button" onClick="clearText()") Clear
+                |&nbsp;&nbsp;&nbsp;&nbsp;
+                button.btn.btn-success(type="button" onClick="compare(1)") Compare By Character
+                |&nbsp;&nbsp;&nbsp;&nbsp;
+                //button.btn.btn-success(onClick="compare(2)") Compare By Word
+                //|&nbsp;&nbsp;&nbsp;&nbsp;
+                //button.btn.btn-success(onClick="compare(3)") Compare By line
+                //|&nbsp;&nbsp;&nbsp;&nbsp;
+                button.btn.btn-success(type="button" onClick="compare(4)") Compare By Sentence
+            .text-center.viewtwo
+                button.btn.btn-primary(type="button" onClick="back()") Back
